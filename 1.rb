@@ -22,7 +22,7 @@ floor = 0
 for index in (0..arr.length - 1)
 	if arr[index] == "("
 		floor += 1
-	elsif arr[index] == ")" && floor != 0
+	elsif arr[index] == ")"
 		floor -= 1
 	end
 end
