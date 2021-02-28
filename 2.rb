@@ -16,3 +16,28 @@
 #
 ## Решение:
 
+require 'digest'
+
+string = gets.chomp
+req_str = "00000"
+md5 = Digest::MD5.new
+numb_arr = []
+md5 << string
+md5_string = ""
+for numb in (1..10**7)
+	md5.reset
+	md5 << string + numb.to_s
+	md5_string = md5.to_s
+	if md5_string[0..4] == req_str
+		numb_arr << numb
+	end
+end
+md5.reset
+puts numb_arr.min
+# if !numb_arr.empty? 
+	# md5 << string + numb_arr[0].to_s
+	# puts "#{numb_arr[0]} \n#{md5.to_s}"
+# else
+	# puts "Нет чисел"
+# end
+
