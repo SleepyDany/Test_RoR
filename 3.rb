@@ -32,4 +32,4 @@ file_lines.each do |line|
 	password += max(arr) + min(arr)
 end
 
-puts " Пароль от замка: #{password}"
+puts password

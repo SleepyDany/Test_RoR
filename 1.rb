@@ -26,5 +26,5 @@ for index in (0..arr.length - 1)
 		floor -= 1
 	end
 end
-puts("Бомба заложена на #{floor} этаже!")
+puts floor
 file.close

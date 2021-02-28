@@ -32,4 +32,4 @@ file_lines.each do |line|
 	square += 2*(arr[0]*arr[1] + arr[0]*arr[2] + arr[1]*arr[2]) + arr[0]*arr[1];
 end
 
-puts " Эльфам потребуется #{square} кв. см. оберточной бумаги."
+puts square
