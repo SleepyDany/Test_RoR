@@ -29,7 +29,7 @@ password = 0
 file_lines = File.readlines("data/3.txt")
 file_lines.each do |line|
 	arr = line.split
-	password += max(arr) + min(arr)
+	password += max(arr) - min(arr)
 end
 
 puts password
