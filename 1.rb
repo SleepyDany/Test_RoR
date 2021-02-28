@@ -16,3 +16,15 @@
 #
 ## Решение:
 
+file = File.open("data/1.txt", "r+")
+arr = file.read
+floor = 0
+for index in (0..arr.length - 1)
+	if arr[index] == "("
+		floor += 1
+	elsif arr[index] == ")" && floor != 0
+		floor -= 1
+	end
+end
+puts("Бомба заложена на #{floor} этаже!")
+file.close

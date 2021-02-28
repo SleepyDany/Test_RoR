@@ -16,4 +16,20 @@
 #
 ## Решение:
 
+def toNumb(arr)
+	for index in (0..arr.size - 1)
+		arr[index] = arr[index].to_i
+	end
+	arr.sort! # длина - arr[0], высота - arr[1], ширина - arr[2]
+end
 
+arr = []
+square = 0
+file_lines = File.readlines("data/4.txt")
+file_lines.each do |line|
+	arr = line.split("x")
+	toNumb(arr)
+	square += 2*(arr[0]*arr[1] + arr[0]*arr[2] + arr[1]*arr[2]) + arr[0]*arr[1];
+end
+
+puts " Эльфам потребуется #{square} кв. см. оберточной бумаги."

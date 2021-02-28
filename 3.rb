@@ -10,4 +10,26 @@
 #
 ## Решение:
 
+def max(arr)
+	for index in (0..arr.size - 1)
+		arr[index] = arr[index].to_i
+	end
+	return arr.max
+end
 
+def min(arr)
+	for index in (0..arr.size - 1)
+		arr[index] = arr[index].to_i
+	end
+	return arr.min
+end
+
+arr = []
+password = 0
+file_lines = File.readlines("data/3.txt")
+file_lines.each do |line|
+	arr = line.split
+	password += max(arr) + min(arr)
+end
+
+puts " Пароль от замка: #{password}"
